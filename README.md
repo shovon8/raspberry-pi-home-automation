@@ -1,6 +1,6 @@
 # Running the App
 Clone the GitHub repository:
-> $ git clone https://github.com/shovon8/raspberry-pi-home-automation.git
+> git clone https://github.com/shovon8/raspberry-pi-home-automation.git
 
 Navigate to the newly created project directory:
 > cd raspberry-pi-home-automation
