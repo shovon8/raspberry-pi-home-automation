@@ -20,13 +20,26 @@ Rename Font Awesome directory to fontawesome/:
 Navigate to the project root:
 > cd ..
 
-Run the Web App:
-> FLASK_APP=server.py flask run --host=0.0.0.0
+Copy the systemd service to /etc/systemd/system/:
+> sudo cp -v raspi-home-automation.service /etc/systemd/system/
+
+Reload the systemd daemons:
+> sudo systemctl daemon-reload
+
+Add the systemd service to the system startup:
+> sudo systemctl enable raspi-home-automation.service
+
+For the changes to take effect, reboot the Raspberry Pi:
+> sudo reboot
+
+Check if the systemd service is active/running:
+> sudo systemctl status raspi-home-automation.service
 
 Find the IP address of your Raspberry Pi:
 > hostname -I
 
 Access the Web App from your favorite web browser at `http://<ip-addr>:5000`
+
 
 
 # NOTE: 
