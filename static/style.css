@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=BenchNine:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'BenchNine', sans-serif;
+}
+
+#content > h1 {
+  background: linear-gradient(to right, rgb(112, 24, 163), rgb(86, 127, 240));
+  color: #fff;
+  text-align: center;
+  padding: .5em 0;
+}
+
+div.room {
+  margin: .5em;
+  border: 2px solid rgb(112, 24, 163);
+  border-radius: 5px;
+}
+
+div.room h2 {
+  /* background: rgb(9, 76, 121); */
+  background: linear-gradient(to right, rgb(112, 24, 163), rgb(86, 127, 240));
+  padding: 0 0 0 .5em;
+  color: #fff;
+}
+
+div.appliances {
+  margin: .5em .5em 0 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.appliance {
+  border: 2px solid rgb(112, 24, 163);
+  border-radius: 5px;
+  width: 110px;
+  height: 120px;
+  text-align: center;
+  margin: 0 0 .5em .5em;
+  display: flex;
+  flex-direction: column;
+}
+
+div.appliance i.fa {
+  font-size: 4em;
+  flex-grow: 1;
+  padding-top: 0.3em;
+  color: rgb(204, 50, 50);
+}
+
+div.appliance[data-active="active"] i.fa {
+  color: rgb(32, 177, 51);
+}
+
+div.appliance span {
+  display: block;
+  font-weight: bold;
+  background: rgb(112, 24, 163);
+  color: #fff;
+}
+

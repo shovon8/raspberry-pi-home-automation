@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <title>Home Automation with Raspberry Pi</title>
+</head>
+<body>
+<div id="content">
+  <h1>Raspberry Pi Home Automation</h1>
+
+  {% for room in rooms %}
+  <div class="room">
+    <h2>{{ room }}</h2>
+    <div class="appliances">
+    {% for appliance in rooms[room] %}
+      <div class="appliance" id="{{ appliance['id'] }}" {% if appliance['status'] %} data-active="active" {% endif %}>
+        <i class="{{ appliance['icon'] }}"></i>
+        <span>{{ appliance['name'] }}</span>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+
+</div>
+
+<script src="{{ url_for('static', filename='app.js') }}" type="text/javascript"></script>
+</body>
+</html>
